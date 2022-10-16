@@ -24,7 +24,7 @@ test("get engineer's id",() => {
     const engineer = new Engineer('Deb',1234,'deb@test.com','debTheKreb');
 
     const actual = engineer.getId();
-    const expected = '1234';
+    const expected = 1234;
 
     expect(actual).toBe(expected);
 
