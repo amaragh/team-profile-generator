@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+.row {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+margin: 10px;
+}
+
+ul {
+    margin: 50px;
+    background-color:red;
+}
+
+li {
+    list-style: none;
+}
