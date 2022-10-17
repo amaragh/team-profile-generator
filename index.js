@@ -72,35 +72,35 @@ const promptEmployee = () => {
             message: 'Would you like to add an employee or finish building your team?',
             choices: ['Add Engineer', 'Add Intern', 'Finish building team']
         }
-        // ,
-        // {
-        //     type: 'input',
-        //     name: 'engName',
-        //     message: 'Engineer Name?',
-        //     when: (answers ) => {
-        //         if (answers.addorExit === 'Add Engineer') {
-        //             return true;
-        //         } else {
-        //             return false;
-        //         }
-        //     }
-        // }
-        // ,
-        // {
-        //     type: 'input',
-        //     name: 'intName',
-        //     message: 'Intern Name?',
-        //     when: ({ answers }) => {
-        //         if (answers.addorExit === 'Add Intern') {
-        //             return true;
-        //         } else {
-        //             return false;
-        //         }
-        //     }
-        // }
+            ,
+        {
+            type: 'input',
+            name: 'engName',
+            message: 'Engineer Name?',
+            when: (answers) => {
+                if (answers.addOrExit === 'Add Engineer') {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+            ,
+        {
+            type: 'input',
+            name: 'intName',
+            message: 'Intern Name?',
+            when: ( answers ) => {
+                if (answers.addOrExit === 'Add Intern') {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
 
-        ]).then((answers) => {
-            console.log(answers.addorExit);})
+        ])
+
 };
 
 
