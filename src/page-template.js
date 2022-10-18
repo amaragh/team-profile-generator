@@ -2,10 +2,10 @@ const Manager = require("../lib/Manager");
 
 
 
+
 function generateHtml(data) {
 
     const manager = new Manager(data.mgrName, data.mgrId, data.mgrEmail, data.officeNum);
-    console.log("HTML", manager);
 
     return `
     <!DOCTYPE html>
@@ -35,11 +35,11 @@ function generateHtml(data) {
             <div class="row">
                 <div class="card col-12">
                     <h3 class="card-title">${manager.getName()}</h3>
-                    <h4 class="card-subtitle">Manager</h4>
+                    <h4 class="card-subtitle">${manager.getRole()}</h4>
                     <ul>
-                        <li>An item</li>
-                        <li>A second item</li>
-                        <li>A third item</li>
+                        <li>ID:${manager.getId()} </li>
+                        <li>Email ${manager.getEmail()}</li>
+                        <li>${manager.officeNumber}</li>
                     </ul>
                 </div>
             </div>
