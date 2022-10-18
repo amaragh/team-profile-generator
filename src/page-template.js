@@ -1,7 +1,48 @@
 const Manager = require("../lib/Manager");
+const Engineer = require("../lib/Engineer");
 
+const generateEmployees = (employeesArr) => {
 
+    // get array of Engineers
+    const engineers = employeesArr.filter(employee => {
+        if (employee.addOrExit === 'Add Engineer') {
+            return true;
+        } else {
+            return false;
+        }
+    });
 
+    // get array of Interns
+    const interns = employeesArr.filter(employee => {
+        if (employee.addOrExit === 'Add Intern') {
+            return true;
+        } else {
+            return false;
+        }
+    });
+
+    const engineersHtmlArr = engineers.map((eng) => {
+        const engineer = new Engineer(eng.empName, eng.empId, eng.empEmail, eng.github);
+
+        return `
+            <div class="card col-lg-3 col-md-5 col-sm-12">
+                <h3 class="card-title">${engineer.getName()}</h3>
+                <h4 class="card-subtitle">Engineer</h4>
+                <ul>
+                    <li>An item</li>
+                    <li>A second item</li>
+                    <li>A third item</li>
+                </ul>
+            </div>
+        `;
+    });
+
+    return `
+    <div class="row">
+    ${engineersHtmlArr.join('')}
+    </div>
+    `;
+}
 
 function generateHtml(data) {
 
@@ -37,15 +78,15 @@ function generateHtml(data) {
                     <h3 class="card-title">${manager.getName()}</h3>
                     <h4 class="card-subtitle">${manager.getRole()}</h4>
                     <ul>
-                        <li>ID:${manager.getId()} </li>
-                        <li>Email ${manager.getEmail()}</li>
-                        <li>${manager.officeNumber}</li>
+                        <li>ID: ${manager.getId()}</li>
+                        <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
+                        <li>Office Number: ${manager.officeNumber}</li>
                     </ul>
                 </div>
             </div>
 
             <div class="row">
-
+                ${generateEmployees(data.employees)}
                 <div class="card col-lg-3 col-md-5 col-sm-12">
 
                     <h3 class="card-title">Fred</h3>

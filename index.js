@@ -107,7 +107,7 @@ const promptEmployee = staffingData => {
         },
         {
             type: 'input',
-            name: 'empGithub',
+            name: 'github',
             message: "What is the employee's GitHub username?",
             when: (answers) => {
                 return answers.addOrExit === 'Add Engineer';
@@ -115,7 +115,7 @@ const promptEmployee = staffingData => {
         },
         {
             type: 'input',
-            name: 'empSchool',
+            name: 'school',
             message: "What is the name of the Intern's school?",
             when: (answers) => {
                 return answers.addOrExit === 'Add Intern';
