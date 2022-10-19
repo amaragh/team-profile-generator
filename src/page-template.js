@@ -41,7 +41,7 @@ const generateEmployees = (employeesArr) => {
     });
 
     const internsHtmlArr = interns.map((int) => {
-        const intern = new Intern(int.empName, int.empId, int.empEmail, int.github);
+        const intern = new Intern(int.empName, int.empId, int.empEmail, int.school);
 
         return `
             <div class="card col-lg-3 col-md-5 col-sm-12">
