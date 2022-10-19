@@ -27,8 +27,10 @@ const generateEmployees = (employeesArr) => {
 
         return `
             <div class="card col-lg-3 col-md-5 col-sm-12">
-                <h3 class="card-title">${engineer.getName()}</h3>
-                <h4 class="card-subtitle">${engineer.getRole()}</h4>
+                <div class="emp-header">
+                    <h3 class="card-title">${engineer.getName()}</h3>
+                    <h4 class="card-subtitle">${engineer.getRole()}  <span class="fa fa-wrench"></span></h4>
+                </div>
                 <ul>
                     <li>ID: ${engineer.getId()}</li>
                     <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
@@ -43,8 +45,10 @@ const generateEmployees = (employeesArr) => {
 
         return `
             <div class="card col-lg-3 col-md-5 col-sm-12">
-                <h3 class="card-title">${intern.getName()}</h3>
-                <h4 class="card-subtitle">${intern.getRole()}</h4>
+                <div class="emp-header">
+                    <h3 class="card-title">${intern.getName()}</h3>
+                    <h4 class="card-subtitle">${intern.getRole()}</h4>
+                </div>
                 <ul>
                     <li>ID: ${intern.getId()}</li>
                     <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
@@ -89,8 +93,10 @@ function generateHtml(data) {
         <div class="container d-flex justify-content-around flex-wrap">
             <div class="row">
                 <div class="card col-12">
-                    <h3 class="card-title">${manager.getName()}</h3>
-                    <h4 class="card-subtitle">${manager.getRole()}</h4>
+                    <div class="emp-header">
+                        <h3 class="card-title">${manager.getName()}</h3>
+                        <h4 class="card-subtitle">${manager.getRole()}</h4>
+                    </div>
                     <ul>
                         <li>ID: ${manager.getId()}</li>
                         <li>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>

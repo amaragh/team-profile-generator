@@ -1,20 +1,40 @@
 * {
     box-sizing: border-box;
 }
+
+h1 {
+    text-align: center;
+    padding: 30px 0;
+    background-color: darkred;
+    color: lightgray;
+    margin-bottom: 50px;
+}
+
 .row {
     width: 90%;
-   
 }
 
 .card {
-margin: 10px;
+    margin: 10px 25px;
+    padding: 0px;
+    box-shadow: 5px 5px 5px #aaaaaa
+}
+
+.emp-header {
+    padding: 10px 22px;
+    background-color: darkred;
+    color: lightgray;
+}
+
+h4 {
+    font-style: italic;
 }
 
 ul {
-    margin: 50px;
-    background-color:red;
+    padding: 10px 22px;
 }
 
 li {
     list-style: none;
+    padding: 0px;
 }
