@@ -156,23 +156,3 @@ promptManager()
 
         return writeToFile('page.html', writeHtmlFile)
     })
-
-    // promptManager()
-    // .then(response => {
-    //     console.log(response)
-    //     responses.push(response);
-    // })
-    // .then(promptEmployee)
-    // .then(answers => {
-    //     responses.push(answers)
-    //     console.log(responses)
-    // })
-    // .then(responseData => {
-    //     return generatePage(responseData);
-    // })
-    // .then(writeHtmlFile => {
-    //     console.log("Your HTML file has been created")
-
-    //     return writeToFile('page.html', writeHtmlFile)
-    // })
-
