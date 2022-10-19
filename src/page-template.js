@@ -47,7 +47,7 @@ const generateEmployees = (employeesArr) => {
             <div class="card col-lg-3 col-md-5 col-sm-12">
                 <div class="emp-header">
                     <h3 class="card-title">${intern.getName()}</h3>
-                    <h4 class="card-subtitle">${intern.getRole()}</h4>
+                    <h4 class="card-subtitle">${intern.getRole()} <span class="fa fa-graduation-cap"></span></h4>
                 </div>
                 <ul>
                     <li>ID: ${intern.getId()}</li>
@@ -59,7 +59,7 @@ const generateEmployees = (employeesArr) => {
     });
 
     return `
-    <div class="row">
+    <div class="row justify-content-center">
     ${engineersHtmlArr.join('')}
     ${internsHtmlArr.join('')}
     </div>
@@ -91,11 +91,11 @@ function generateHtml(data) {
 
     <main>
         <div class="container d-flex justify-content-around flex-wrap">
-            <div class="row">
-                <div class="card col-12">
+            <div class="row justify-content-center">
+                <div class="card col-lg-3 col-md-5 col-sm-12">
                     <div class="emp-header">
                         <h3 class="card-title">${manager.getName()}</h3>
-                        <h4 class="card-subtitle">${manager.getRole()}</h4>
+                        <h4 class="card-subtitle">${manager.getRole()} <span class="fa fa-chart-line"></span></h4>
                     </div>
                     <ul>
                         <li>ID: ${manager.getId()}</li>
