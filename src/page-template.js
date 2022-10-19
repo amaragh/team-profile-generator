@@ -27,11 +27,11 @@ const generateEmployees = (employeesArr) => {
         return `
             <div class="card col-lg-3 col-md-5 col-sm-12">
                 <h3 class="card-title">${engineer.getName()}</h3>
-                <h4 class="card-subtitle">Engineer</h4>
+                <h4 class="card-subtitle">${engineer.getRole()}</h4>
                 <ul>
-                    <li>An item</li>
-                    <li>A second item</li>
-                    <li>A third item</li>
+                    <li>ID: ${engineer.getId()}</li>
+                    <li>Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                    <li>GitHub: <a href="${engineer.getGithub()}" target="_blank">${engineer.github}</a></li>
                 </ul>
             </div>
         `;
