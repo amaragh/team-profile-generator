@@ -1,5 +1,6 @@
 const Manager = require("../lib/Manager");
 const Engineer = require("../lib/Engineer");
+const Intern = require("../lib/Intern");
 
 const generateEmployees = (employeesArr) => {
 
@@ -37,9 +38,26 @@ const generateEmployees = (employeesArr) => {
         `;
     });
 
+    const internsHtmlArr = interns.map((int) => {
+        const intern = new Intern(int.empName, int.empId, int.empEmail, int.github);
+
+        return `
+            <div class="card col-lg-3 col-md-5 col-sm-12">
+                <h3 class="card-title">${intern.getName()}</h3>
+                <h4 class="card-subtitle">${intern.getRole()}</h4>
+                <ul>
+                    <li>ID: ${intern.getId()}</li>
+                    <li>Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
+                    <li>School: ${intern.getSchool()}</li>
+                </ul>
+            </div>
+        `;
+    });
+
     return `
     <div class="row">
     ${engineersHtmlArr.join('')}
+    ${internsHtmlArr.join('')}
     </div>
     `;
 }
@@ -49,7 +67,7 @@ function generateHtml(data) {
     const manager = new Manager(data.mgrName, data.mgrId, data.mgrEmail, data.officeNum);
 
     return `
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -59,11 +77,7 @@ function generateHtml(data) {
     <title>Test Team Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-
     <link rel="stylesheet" href="design.css">
-
-
-
 </head>
 
 <body>
@@ -84,33 +98,9 @@ function generateHtml(data) {
                     </ul>
                 </div>
             </div>
-
-            <div class="row">
-                ${generateEmployees(data.employees)}
-                <div class="card col-lg-3 col-md-5 col-sm-12">
-
-                    <h3 class="card-title">Fred</h3>
-                    <h4 class="card-subtitle">Engineer</h4>
-                    <ul>
-                        <li>An item</li>
-                        <li>A second item</li>
-                        <li>A third item</li>
-                    </ul>
-                </div>
-                <div class="card  col-lg-3 col-md-5 col-sm-12">
-
-                    <h3 class="card-title">Mike</h3>
-                    <h4 class="card-subtitle">Intern</h4>
-                    <ul>
-                        <li>An item</li>
-                        <li>A second item</li>
-                        <li>A third item</li>
-                    </ul>
-                </div>
-            </div>
+             ${generateEmployees(data.employees)}
         </div>
     </main>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
 
