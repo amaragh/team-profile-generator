@@ -20,7 +20,7 @@ The below is seen once the application is invoked.
 
 ![](./assets/images/launch-application.png)
 
-Once the manager prompts have been answered, the below prompt will appear. After an Engineer or Intern icreated, the prompt will appear again until the user selects 'Finish building team', at which point, the application will exit, and the HTML page will be generated in the `/dist` folder.
+Once the manager prompts have been answered, the below prompt will appear. After an Engineer or Intern is created, the prompt will appear again until the user selects 'Finish building team', at which point, the application will exit, and the final HTML page will be generated in the `/dist` folder.
 
 ![](./assets/images//ee-prompts.png)
 
