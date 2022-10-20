@@ -148,7 +148,6 @@ function writeToFile(fileName, data) {
 promptManager()
     .then(promptEmployee)
     .then(responseData => {
-        console.log(responseData)
         return generatePage(responseData);
     })
     .then(writeHtmlFile => {
