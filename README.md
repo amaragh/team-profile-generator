@@ -28,14 +28,19 @@ The demo recording can be found [here](https://youtu.be/1EZn5_iB2Ps).
 
 Navigate to project root directory and run the command `node index` to invoke the application. The application allows entry of one team manager and multiple engineers and interns. 
 
-Provide instructions and examples for use. Include screenshots as needed.
+The below is seen once the application is invoked. 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![](./assets/images/launch-application.png)
 
+Once the manager prompts have been answered, the below prompt will appear. After an Engineer or Intern icreated, the prompt will appear again until the user selects 'Finish building team', at which point, the application will exit, and the HTML page will be generated in the `/dist` folder.
+
+![](./assets/images//ee-prompts.png)
+
+
+A sample of a generated team page is shown below. Clicking on an email address will take to you a draft email to that email address in your machine's native email application. Clicking on the GitHub username will take you to the engineer's GitHub profile in a new tab.
+
+![Sample rendered HTML page for a small team.](./assets/images/html-rendering.png)
 
 
 ## License
