@@ -22,7 +22,7 @@ test("get managers's name", () => {
 });
 
 test("get manager's id", () => {
-    const manager = new Manager('Deb', 1234, 'deb@test.com',15);
+    const manager = new Manager('Deb', 1234, 'deb@test.com', 15);
 
     const actual = manager.getId();
     const expected = 1234;
@@ -32,7 +32,7 @@ test("get manager's id", () => {
 });
 
 test("get manager's Email", () => {
-    const manager = new Manager('Deb', 1234, 'deb@test.com',15);
+    const manager = new Manager('Deb', 1234, 'deb@test.com', 15);
 
     const actual = manager.getEmail();
     const expected = 'deb@test.com';
@@ -41,8 +41,8 @@ test("get manager's Email", () => {
 
 });
 
-test("get managers's role",() => {
-    const manager = new Manager('Deb', 1234, 'deb@test.com',15);
+test("get managers's role", () => {
+    const manager = new Manager('Deb', 1234, 'deb@test.com', 15);
 
     const actual = manager.getRole();
     const expected = 'Manager';

@@ -1,7 +1,7 @@
 const Engineer = require('../lib/Engineer');
 
 test('creates an engineer object', () => {
-    const engineer = new Engineer('Deb',1234,'deb@test.com','debTheKreb');
+    const engineer = new Engineer('Deb', 1234, 'deb@test.com', 'debTheKreb');
 
     expect(engineer.name).toBe('Deb');
     expect(engineer.id).toBe(1234);
@@ -10,8 +10,8 @@ test('creates an engineer object', () => {
 
 });
 
-test("get engineer's name",() => {
-    const engineer = new Engineer('Deb',1234,'deb@test.com','debTheKreb');
+test("get engineer's name", () => {
+    const engineer = new Engineer('Deb', 1234, 'deb@test.com', 'debTheKreb');
 
     const actual = engineer.getName();
     const expected = 'Deb';
@@ -20,8 +20,8 @@ test("get engineer's name",() => {
 
 });
 
-test("get engineer's id",() => {
-    const engineer = new Engineer('Deb',1234,'deb@test.com','debTheKreb');
+test("get engineer's id", () => {
+    const engineer = new Engineer('Deb', 1234, 'deb@test.com', 'debTheKreb');
 
     const actual = engineer.getId();
     const expected = 1234;
@@ -30,8 +30,8 @@ test("get engineer's id",() => {
 
 });
 
-test("get engineer's Email",() => {
-    const engineer = new Engineer('Deb',1234,'deb@test.com','debTheKreb');
+test("get engineer's Email", () => {
+    const engineer = new Engineer('Deb', 1234, 'deb@test.com', 'debTheKreb');
 
     const actual = engineer.getEmail();
     const expected = 'deb@test.com';
@@ -41,8 +41,8 @@ test("get engineer's Email",() => {
 });
 
 
-test("get engineer's role",() => {
-    const engineer = new Engineer('Deb',1234,'deb@test.com','debTheKreb');
+test("get engineer's role", () => {
+    const engineer = new Engineer('Deb', 1234, 'deb@test.com', 'debTheKreb');
 
     const actual = engineer.getRole();
     const expected = 'Engineer';
@@ -50,8 +50,8 @@ test("get engineer's role",() => {
     expect(actual).toBe(expected);
 });
 
-test("get engineer's github",() => {
-    const engineer = new Engineer('Deb',1234,'deb@test.com','debTheKreb');
+test("get engineer's github", () => {
+    const engineer = new Engineer('Deb', 1234, 'deb@test.com', 'debTheKreb');
 
     const actual = engineer.getGithub();
     const expected = 'https://github.com/debTheKreb';
