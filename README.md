@@ -2,21 +2,9 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+Using `inquirer` and `jest`, I was able to create a Node.js command line application to collect team member information and then generate a simple HTML page based on the information entered.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+This was a challenging exercise in writing and passing tests, creating conditional prompts using inquirer and leveraging prompts responses with ES6 classes to conditionally generate dynamic HTML.
 
 ## Installation
 
@@ -29,7 +17,6 @@ The demo recording can be found [here](https://youtu.be/1EZn5_iB2Ps).
 Navigate to project root directory and run the command `node index` to invoke the application. The application allows entry of one team manager and multiple engineers and interns. 
 
 The below is seen once the application is invoked. 
-
 
 ![](./assets/images/launch-application.png)
 
