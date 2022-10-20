@@ -155,3 +155,6 @@ promptManager()
 
         return writeToFile('page.html', writeHtmlFile)
     })
+    .catch(err => {
+        console.log(err);
+    });
